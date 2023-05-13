@@ -3,11 +3,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bio: Rebecca Hemstad</title>
 </head>
+
+
 <body>
 
-    This is a test again
+<header><h1>My Bio</h1></header>
+
+<main>
+
+<!-- ************** IDENTITY ******************** -->
+<section>
+<h2>Rebecca Hemstad</h2>
+<p><a href="https://github.com/Rhemstad">My GitHub Repo</a></p>
+</section>
+
+
+<!-- ************** LOCATION ******************** -->
+<section>
+<h2>Location:</h2>
+<img src="/images/Flag_of_the_United_States.png" alt="United States Flag" width="100" height="50">
+</section>
+
+<!-- ************** HOBBIES ******************** -->
+<section>
+<h2>Hobbies:</h2>
+
+<ul>
+<li>hobby 1</li>
+<li>hobby 2</li>
+<li>hobby 3</li>
+<li>hobby 4</li>
+</ul>
+</section>
+
+
+<!-- ************** ABOUT ME ******************** -->
+<section>
+<h2>About Me:</h2>
+<p>a short paragraph</p>
+<img src="/images/me.jpg" alt="Rebecca Hemstad" width="200" height="200">
+</section>
+
+<!-- ************** CONTACT ME ******************** -->
+<h2>Contact Me</h2>
+
+<form action="index.php" method="post">
+<section>
+    <label for="username">Name: <span aria-label="required">*</span></label>
+    <input id="username" type="text" name="username" required />
+</section>
     
+<section>
+    <label for="email">Email: <span aria-label="required">*</span></label>
+    <input type="email" name="email" id="email" required>
+</section>
+
+<section>
+    <label for="message">Message: <span aria-label="required">*</span></label>
+    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+</section>
+
+<section>
+    <button type="submit" value="submit">Submit</button>
+</section>
+
+</form>
+
+</main>
+
+
 </body>
 </html>

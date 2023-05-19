@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bio: Rebecca Hemstad</title>
+    <link rel="stylesheet" href="./css/tokens.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 
@@ -16,19 +18,34 @@
     <h1>Rebecca Hemstad</h1>
     <p><a href="https://github.com/Rhemstad">My GitHub Repo</a></p>
     </hgroup>
+
+    <nav>
+        <ul>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#location">Hobbies</a></li>
+            <li><a href="#location">About Me</a></li>
+            <li><a href="#location">Contact Me</a></li>
+        </ul>
+    </nav>
 </header>
 
 
 <!-- ************** MAIN ******************** --> 
 <main>
-<!-- ************** LOCATION ******************** -->
-    <section>
+<!-- ************** SECTION 1: LOCATION ******************** -->
+    <section id="location">
         <h2>Location:</h2>
+        <p>I am currently located in North Carolina, USA</p>
+        <p>I am originally from Canada</p>
+
+        <figure>
         <img src="./images/Flag_of_the_United_States.png" alt="United States Flag" width="100" height="50">
+        <figcaption>United States Flag</figcaption>
+        </figure>
     </section>
 
-<!-- ************** HOBBIES ******************** -->
-    <section>
+<!-- ************** SECTION 2: HOBBIES ******************** -->
+    <section id="hobbies">
         <h2>Hobbies:</h2>
 
         <ul>
@@ -41,27 +58,30 @@
     </section>
 
 
-    <!-- ************** ABOUT ME ******************** -->
-    <section>
+    <!-- ************** SECTION 3: ABOUT ME ******************** -->
+    <section id="aboutMe">
         <h2>About Me:</h2>
         <p>I am a UX/UI Designer with nearly 30 years experience. My current emphasis is Design Systems.
             I work full time at an awesome large software company. I am also an educator. I have
             taught web design at North Carolina State University and Savannah College of Art and Design.
             Once I finish this bootcamp, I plan to dive into Python and Deep Learning. 
         </p> 
-        <img src="./images/me1.png" alt="Rebecca Hemstad" height="200">
+
+        <figure>
+            <img src="./images/me1.png" alt="Rebecca Hemstad" height="200">
+            <figcaption>Rebecca</figcaption>
+        </figure>
     </section>
 
-<!-- ************** CONTACT ME ******************** -->
+<!-- ************** SECTION 4: CONTACT ME ******************** -->
 <!-- reference validating use of aria-label 
     https://www.w3.org/TR/WCAG20-TECHS/ARIA2.html#:~:text=The%20WAI%2DARIA%20aria%2Drequired,is%20set%20to%20%22true%22. 
 -->
-
 <!-- self note: reminder that input is a void element 
     Void elements only have a start tag; end tags must not be specified for void elements. 
 -->
 
-<section>
+<section id="contactMe">
     <h2>Contact Me</h2>
 
     <form action="index.php" method="post">

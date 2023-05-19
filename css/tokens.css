@@ -1,9 +1,9 @@
 :root {
 
     /* responsive typography */
-    --minFontSize: 1rem;
-    --maxFontSize: 2rem;
-    --scaler: 2vw
+    --fontSizeMin: 1rem;
+    --fontSizeMax: 2rem;
+    --fontScaler: 2vw
 
 
 

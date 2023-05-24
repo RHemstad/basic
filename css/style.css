@@ -1,6 +1,11 @@
 /* ******** NOTES ********** */
 /* I am using fluid typography with clamp() */
 
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -14,7 +19,6 @@ body {
     var(--font-scaler),
     var(--font-size-max)
   );
-
   margin: 0 auto;
   background-color: var(--color-neutral);
 }
@@ -66,11 +70,7 @@ figcaption {
 
 header {
   display: flex;
-  /*position: fixed;
-  top: 0; */
-
   width: 100%;
-  
   background-color: var(--color-neutral);
   background-image: url("../../images/background-pattern.png");
   background-repeat: repeat;
@@ -124,6 +124,7 @@ li a {
 
 /* ********************** */
 /* ******* MAIN ********* */
+
 
 /* ******* SECTIONS ********* */
 
@@ -255,20 +256,84 @@ footer {
   padding-block: var(--spacing-md);
 }
 
+/* ******* BACK TO TOP ********* */
+
+
 .top {
-  --offset: 50px; 
   position: sticky;
   bottom: 20px;      
-  margin-right:10px; 
+  margin-right: 10px; 
   place-self: end;
   margin-top: calc(100vh + var(--offset));
   font-size: 75%;
-  /* visual styling */
+
+
+
+  /*
   text-decoration: none;
   padding-inline: var(--spacing-x-sm);
   color:  var(--color-neutral);
   background:  var(--color-neutral);
   border-radius: var(--border-radius-large);
   white-space: nowrap;
+  */
+
+
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+
+
+
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+
+
+}
+
+#button {
+  background-color: var(--color-primary);
+  width:  3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  /*opacity: 0;
+  visibility: hidden;*/
+  z-index: 1000;
+  font-size: clamp(
+    var(--font-size-max),
+    var(--font-size-max),
+    var(--font-size-max)
+  );
+
+  display: none;
+  z-index: 99;
+  color:  var(--color-neutral);
+  cursor: pointer;
+
+
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  color: var(--color-neutral);
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: var(--color-secondary);
+}
+
+#button:active {
+  background-color: var(--color-secondary);
 }
 

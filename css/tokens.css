@@ -39,5 +39,9 @@
     /* easing */
     --easing-long: 0.6s;
 
+    /* offset */
+
+    --offset: 50px; 
+
 
 }

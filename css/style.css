@@ -173,11 +173,12 @@ section#contactMe form {
   max-width: 50ch;
   display: flex;
   flex-direction: column;
+  color: var(--color-text);
 }
 
 section#location div,
 section#aboutMe div {
-  color: var(--color-white);
+  color: var(--color-neutral);
 }
 
 

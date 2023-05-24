@@ -1,57 +1,81 @@
+/* ******** NOTES ********** */
+/* I am using fluid typography with clamp() */
 
-
-@import url(//fonts.googleapis.com/css?family=Lato:300:400);
-
-
-
-
-
-body {
-  font-family: 'Lato', sans-serif;
-  font-size: clamp( var(--fontSizeMin), var(--fontScaler), var(--fontSizeMax) );
-  border: 1px solid red;
-  margin: 0 auto;
-  /*background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);*/
-
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
+body {
+  font-family: 'PT Serif', serif;
+  box-sizing: border-box;
+  font-size: clamp(
+    var(--font-size-min),
+    var(--font-scaler),
+    var(--font-size-max)
+  );
 
+  margin: 0 auto;
+  background-color: var(--color-neutral);
+}
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PT Serif', serif;
+}
 
 
 /* ******* LINKS ********* */
 a:link {
-  text-decoration: none;
-  color: inherit;
+  color: var(--color-link-normal);
 }
 a:hover {
-  text-decoration: underline;
-  color: inherit;
+  color: var(--color-link-hover);
 }
+
 a:visited {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-link-visited);
 }
 a:active {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-link-active);
 }
 
+p {
+  margin-block-start: var(--spacing-xx-sm);
+  margin-block-end: var(--spacing-xx-sm);
+  margin-inline-start: var(--spacing-xx-sm);
+  margin-inline-end: var(--spacing-xx-sm);
+}
 
+/* ******* FIG AND FIG CAPTION ********* */
+
+figure {
+align-items: center;
+  display:flex;
+  flex-direction: column;
+
+}
+
+figcaption {
+  font-size: 75%;
+  padding-block: var(--spacing-md);
+}
 
 /* ******* HEADER ********* */
 
 header {
   display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  /*position: fixed;
+  top: 0; */
 
-  background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  
+  background-color: var(--color-neutral);
+  background-image: url("../../images/background-pattern.png");
+  background-repeat: repeat;
+  padding-inline: var(--spacing-md);
+  padding-block: var(--spacing-md);
 }
 
 header hgroup {
@@ -59,7 +83,6 @@ header hgroup {
 }
 
 header h1 {
-  border: 1px solid pink;
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
@@ -67,121 +90,184 @@ header h1 {
 }
 
 header p {
-margin-block-start: 0;
-margin-block-end: 0;
-margin-inline-start: 0;
-margin-inline-end: 0;
+  margin-block: 0;
+  margin-inline: 0;
 }
 
 header nav {
-  border: 1px solid yellow;
+  display:flex;
+  align-items: flex-start;
+  margin-inline: var(--spacing-xxx-lg);
+  height: fit-content;
 }
 
 header nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-  width: inherit;
-  justify-content: flex-end;
+  list-style: none;
+  margin-block: 0;
+  padding-inline: 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
 }
 
 header nav ul li {
-  border: 1px solid black;
+  list-style: none;
+  flex-basis: auto;
+  white-space: nowrap;
+}
 
+li a {
+  transition: all 0.3s ease 0s;
 }
 
 
+/* ********************** */
 /* ******* MAIN ********* */
-main {
-  border: 1px solid blue;
-}
 
-
-/* ******* MAIN SECTIONS ********* */
+/* ******* SECTIONS ********* */
 
 section {
-  border: 1px solid green;
   width: 100%;
   height: 100vh;
-  
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  
-  /*background-size: cover;*/
   background-repeat: repeat;
-  /*background-attachment: fixed;*/
-
-
   background-attachment: fixed;
   background-position: center top;
-  /*background-size: cover;*/
-
-}
-
-section div {
-
 }
 
 /* ******* SECTION IMAGES ********* */
 
 /* SECTION 1: LOCATION */
-section:nth-of-type(1){
-  background-image:url("../images/moroccan-flower-dark.png");
-  /*background: linear-gradient(320deg,#f27121,#e94057,#8a2387);*/
+section:nth-of-type(1) {
+  background-image: url("../images/moroccan-flower-dark.png");
 }
 
 /* SECTION 2: HOBBIES */
-section:nth-of-type(2){
-  background-image:url("../images/moroccan-flower.png");
+section:nth-of-type(2) {
+  background-image: url("../images/moroccan-flower.png");
 }
 
 /* SECTION 3: ABOUT ME */
-section:nth-of-type(3){
-  background-image:url("../images/moroccan-flower-dark.png");
+section:nth-of-type(3) {
+  background-image: url("../images/moroccan-flower-dark.png");
 }
 
 /* SECTION 4: CONTACT ME */
-section:nth-of-type(4){
-  background-image:url("../images/moroccan-flower.png");
+section:nth-of-type(4) {
+  background-image: url("../images/moroccan-flower.png");
 }
 
 
+section#aboutMe div,
+section#hobbies ul,
+section#contactMe form {
+  border: 0 none;
+  border-radius: var(--size-border-radius-medium);
+  padding-inline: var(--spacing-xxx-lg);
+  padding-block: var(--spacing-xxx-lg);
+  max-width: 50ch;
+  display: flex;
+  flex-direction: column;
+}
+
+section#location div,
+section#aboutMe div {
+  color: var(--color-white);
+}
+
+
+section#contactMe form {
+  background-color: var(--color-neutral);
+  background-image: url("../../images/background-pattern.png");
+  background-repeat: repeat;
+}
+
+#location h2,
+#aboutMe h2 {
+  color: var(--color-neutral);
+}
+
+#hobbies h2,
+#contactMe h2 {
+  color: var(--color-text);
+}
+
+#aboutMe img {
+border-radius: var(--size-border-radius-full);
+border: 5px solid var(--color-primary);
+}
 
 form {
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
 }
 
-input {
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 10px;
+input,
+textarea {
+  padding-block: 0.5rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--size-border-radius-medium);
+  margin-block-end: var(--spacing-md);
   width: 100%;
   box-sizing: border-box;
 }
 
+form div:nth-of-type(3) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 
+form div:nth-of-type(4) {
+ align-self: flex-end;
+}
 
+/* **************** BUTTON *************** */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--easing-long) ease;
+  background-color: var(--color-primary);
+  color: var(--color-neutral);
+  padding-inline: var(--spacing-md);
+  padding-block: var(--spacing-md);
+  border-radius: var(--size-border-radius-medium);
+  font-size: 75%;
+}
 
+button:focus, 
+button:hover {
+  background: var(--color-primary);
+}
 
 /* ******* FOOTER ********* */
 
 footer {
-  /*
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  */
+  padding-inline: var(--spacing-md);
+  padding-block: var(--spacing-md);
 }
 
-
+.top {
+  --offset: 50px; 
+  position: sticky;
+  bottom: 20px;      
+  margin-right:10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  font-size: 75%;
+  /* visual styling */
+  text-decoration: none;
+  padding-inline: var(--spacing-x-sm);
+  color:  var(--color-neutral);
+  background:  var(--color-neutral);
+  border-radius: var(--border-radius-large);
+  white-space: nowrap;
+}
 

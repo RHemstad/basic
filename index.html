@@ -1,8 +1,11 @@
 <!-- ************** NOTES **************************************** -->
 <!-- was totally lazy and did not code the header to be responsive -->
+<!-- was likewise lazy and did not create responsive images for use with srcset etc -->
 <!-- did not use chatGPT or coPilot to write this code because it is so basic -->
 <!-- had fun messing with fluid typography -->
-<!-- used this opportunity to practice using inline and block -->
+<!-- used this opportunity to practice using inline and block in lieu of padding/margin -->
+<!-- only cross browser tested on mac in safari, firefox and chrome -->
+<!-- did not do prefers-color-scheme dark -->
 
 
 <!DOCTYPE html>
@@ -28,6 +31,7 @@
 <!-- Back to top  -->
 <a onclick="topFunction()" id="button" title="Go to top"></a>
 
+<!-- ****************************************** -->
 <!-- ************** HEADER ******************** -->
 <header>
     <hgroup>
@@ -46,8 +50,10 @@
 </header>
 
 
+<!-- ****************************************** -->
 <!-- ************** MAIN ******************** --> 
 <main>
+
 <!-- ************** LOCATION ******************** -->
     <section id="location">
         <h2>Location:</h2>
@@ -56,14 +62,13 @@
         <p>I am originally from Canada.</p>
 
         <figure>
-        <img src="./images/Flag_of_the_United_States.png" alt="United States Flag" width="100" height="50">
+        <img src="./images/Flag_of_the_United_States.png" alt="United States Flag">
+
         <figcaption>United States Flag</figcaption>
         </figure>
         </div>
 
     </section>
-
-
 
 <!-- ************** SECTION 2: HOBBIES ******************** -->
     <section id="hobbies">
@@ -85,14 +90,18 @@
         <h2>About Me:</h2>
 
         <div>
+
+        <figure>
+            <img src="./images/me1.png" alt="Rebecca Hemstad">
+             <figcaption>Rebecca</figcaption>
+        </figure>  
+          
         <p>I am a UX/UI Designer with nearly 30 years experience. My current emphasis is Design Systems.
             I work full time at an awesome large software company. I am also an educator. I have
             taught web design at North Carolina State University and Savannah College of Art and Design.
             Once I finish this bootcamp, I plan to dive into Python and Deep Learning. 
         </p> 
-        <figure>
-            <img src="./images/me1.png" alt="Rebecca Hemstad" height="200">
-            <figcaption>Rebecca</figcaption></figure>    
+
         </div>
         
         </section>
@@ -133,8 +142,16 @@
 
 </main>
 
+
+<!-- ****************************************** -->
+<!-- ************** FOOTER ******************** -->
+
 <footer>&#169; 2023</footer>
 
+
+
+<!-- ****************************************** -->
+<!-- ********** JAVASCRIPT ******************** -->
 
 <script>
 
